@@ -14,3 +14,10 @@ $MESS['ERROR_BAD_USER_FIELD_IBLOCK'] = 'У пользовательского п
                                      . 'название константы, под которой хранится символьный код инфоблока';
 $MESS['ERROR_USER_FIELD_CREATING'] = 'Не удалось добавить пользовательское поле NAME';
 $MESS['ERROR_MAIN_LINK_CREATING'] = 'Не удалось создать символьную ссылку в корне сайта для LINK';
+
+// Пользовательское поле для пользователей, чтобы хранить индивидуальный язык сайта
+$MESS['USER_LANG_TITLE'] = 'Язык сайта';
+$MESS['USER_LANG_TITLE_RU'] = 'Русский';
+$MESS['USER_LANG_TITLE_EN'] = 'Английский';
+$MESS['USER_LANG_TITLE_DE'] = 'Немецкий';
+$MESS['USER_LANG_TITLE_PO'] = 'Польский';

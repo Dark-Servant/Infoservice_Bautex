@@ -86,7 +86,35 @@ class infoservice_bautex extends CModule
          *      E - маска
          *      S - подстрока
          */
-        'UserFields' => [],
+        'UserFields' => [
+            // Пользовательское поле для пользователей, чтобы хранить индивидуальный язык сайта
+            'INFS_USER_LANG_FIELD' => [
+                'LANG_CODE' => 'USER_LANG_TITLE',
+                'TYPE' => 'enumeration',
+                'SHOW_IN_LIST' => 'Y',
+                'EDIT_IN_LIST' => 'Y',
+                'LIST_VALUES' => [
+                    [
+                        'LANG_CODE' => 'RU',
+                        'XML_ID' => 'ru',
+                        'DEF' => 'Y',
+                    ],
+                    [
+                        'LANG_CODE' => 'EN',
+                        'XML_ID' => 'en',
+                    ],
+                    [
+                        'LANG_CODE' => 'DE',
+                        'XML_ID' => 'de',
+                        'DEF' => 'Y',
+                    ],
+                    [
+                        'LANG_CODE' => 'PO',
+                        'XML_ID' => 'po',
+                    ]
+                ]
+            ]
+        ],
     ];
 
     /**
@@ -100,7 +128,9 @@ class infoservice_bautex extends CModule
      * как <символьное имя highloadblock><название события>, например, для события OnAdd
      * у highloadblock с символьным именем Test такой обработчик должен называться TestOnAdd
      */
-    const EVENTS_HANDLES = [];
+    const EVENTS_HANDLES = [
+        'main' => ['EventHandles\\BufferEventHandle']
+    ];
 
     /**
      * Для файлов в папке www, что лежит в папке install модуля. Указываются файлы и папки, на которые надо создать
@@ -122,7 +152,7 @@ class infoservice_bautex extends CModule
      *     - replace. Делается то же самое, что и при add, только скопированный файл не подключается
      *       в новом файле
      */
-    const WWW_FILES = [];
+    const WWW_FILES = ['add' => 'bitrix/php_interface/dbconn.php'];
 
     /**
      * Запоминает и возвращает настоящий путь к текущему классу
