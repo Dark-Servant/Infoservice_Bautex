@@ -1,4 +1,6 @@
 <?
+require_once __DIR__ . '/../../ru/install/index.php';
+
 $MESS['INFOSERVICE_BAUTEX_MODULE_NAME'] = 'Module "Bautex"';
 $MESS['INFOSERVICE_BAUTEX_MODULE_DESCRIPTION'] = '';
 $MESS['INFOSERVICE_BAUTEX_MODULE_WAS_INSTALLED'] = $MESS['INFOSERVICE_BAUTEX_MODULE_NAME'] . ' was installed';
